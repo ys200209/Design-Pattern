@@ -9,9 +9,9 @@ public abstract class AbstractCarBuilder {
         car = new Car();
     }
 
-    abstract public void buildWheel();
+    public abstract void buildWheel();
 
-    abstract public void buildWing();
+    public abstract void buildWing();
 
     public Car getCar() {
         return this.car;
