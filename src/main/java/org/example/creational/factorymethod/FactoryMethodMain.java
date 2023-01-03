@@ -21,6 +21,5 @@ public class FactoryMethodMain {
          */
 
         Creator creator = new PaperCreator();
-        Product product = creator.redFactoryMethod();
     }
 }
