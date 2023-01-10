@@ -1,8 +1,6 @@
 package org.example.creational.factorymethod;
 
 import org.example.creational.factorymethod.creator.Creator;
-import org.example.creational.factorymethod.creator.PaperCreator;
-import org.example.creational.factorymethod.product.Product;
 
 public class FactoryMethodMain {
     public static void main(String[] args) {
