@@ -1,6 +1,10 @@
 package org.example.creational.factorymethod;
 
-import org.example.creational.factorymethod.creator.Creator;
+import org.example.creational.factorymethod.creator.ConnectionCreator;
+import org.example.creational.factorymethod.creator.MySQLConnectionCreator;
+import org.example.creational.factorymethod.product.Connection;
+import org.example.creational.factorymethod.product.ConnectionCreatorSelector;
+import org.example.creational.factorymethod.product.ConnectionType;
 
 public class FactoryMethodMain {
     public static void main(String[] args) {
@@ -18,6 +22,20 @@ public class FactoryMethodMain {
          * 2. Creator가 구체 클래스이고, 팩토리 메서드에 대한 기본 구현을 제공하는 경우
          */
 
-        Creator creator = new PaperCreator();
+        /*ConnectionCreator creator = getConnectionCreator();
+        Connection connection = creator.create(ConnectionType.ORACLE);
+        connection.connect();*/
+
+        /*ConnectionCreator creator = ConnectionCreatorSelector.create(ConnectionType.ORACLE);
+        Connection connection = creator.create();
+        connection.connect();*/
+
+        Connection connection = ConnectionCreatorSelector.create(ConnectionType.MYSQL);
+        connection.connect();
     }
+
+    /*private static ConnectionCreator getConnectionCreator() {
+        return new MySQLConnectionCreator();
+//        return new OracleConnectionCreator();
+    }*/
 }

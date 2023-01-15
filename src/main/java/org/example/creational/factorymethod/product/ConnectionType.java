@@ -1,4 +1,5 @@
 package org.example.creational.factorymethod.product;
 
-public interface Product {
+public enum ConnectionType {
+    MYSQL, ORACLE
 }
