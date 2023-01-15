@@ -22,7 +22,7 @@ public abstract class ConnectionCreator {
         return connection; // 4. 커넥션 반환하기
     }*/
 
-    public Connection create() {
+    public Connection create(ConnectionType type) {
         createConnection(); // 1. 커넥션 만들기
         setConnectionId(); // 2. 커넥션에 ID 세팅하기
         setConnectionPassword(); // 3. 커넥션에 Password 세팅하기
