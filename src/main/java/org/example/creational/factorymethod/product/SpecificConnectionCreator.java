@@ -5,14 +5,15 @@ import org.example.creational.factorymethod.creator.ConnectionCreator;
 import org.example.creational.factorymethod.creator.MySQLConnectionCreator;
 import org.example.creational.factorymethod.creator.OracleConnectionCreator;
 
-public enum ConnectionCreatorSelector {
+public enum SpecificConnectionCreator {
     MYSQL(ConnectionType.MYSQL, new MySQLConnectionCreator()),
     ORACLE(ConnectionType.ORACLE, new OracleConnectionCreator());
 
     private ConnectionType type;
     private ConnectionCreator creator;
 
-    ConnectionCreatorSelector(ConnectionType type, ConnectionCreator creator) {
+    SpecificConnectionCreator(ConnectionType type,
+                              ConnectionCreator creator) {
         this.type = type;
         this.creator = creator;
     }

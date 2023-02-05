@@ -1,10 +1,8 @@
 package org.example.creational.factorymethod;
 
-import org.example.creational.factorymethod.creator.ConnectionCreator;
-import org.example.creational.factorymethod.creator.MySQLConnectionCreator;
 import org.example.creational.factorymethod.product.Connection;
-import org.example.creational.factorymethod.product.ConnectionCreatorSelector;
 import org.example.creational.factorymethod.product.ConnectionType;
+import org.example.creational.factorymethod.product.SpecificConnectionCreator;
 
 public class FactoryMethodMain {
     public static void main(String[] args) {
@@ -30,7 +28,7 @@ public class FactoryMethodMain {
         Connection connection = creator.create();
         connection.connect();*/
 
-        Connection connection = ConnectionCreatorSelector.create(ConnectionType.MYSQL);
+        Connection connection = SpecificConnectionCreator.create(ConnectionType.MYSQL);
         connection.connect();
     }
 
